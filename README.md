@@ -1,6 +1,12 @@
 # Rosalind-Challenges
 Scripts I have used to complete the tasks set out by Rosalind.info
 
+## Finding a Protein Motif
+### MotifFinder
+Contains:
+ - a script which takes a list of UniProt IDs and outputs the location of the N-glycosylation motif.
+ - three text files containing example IDs.
+
 ## Calculate the GC content of DNA
 ### CalculateGC
 Contains a script which takes a FASTA formatted which contains a DNA sequence and calculates the relative amount of Guanine and Cytosine in the sequence.
