@@ -28,3 +28,9 @@ Contains:
  - My script, which contains the Python code solution (RNAsplice.py).
  - A dependent file which contains the genetic code for RNA sequences (genetic_code.tsv).
  - Two example FASTA files. The first sequence in each file is the sequence that is to be spliced and the remaining sequences are all introns.
+
+## Calculate the Transition/Transversion Ratio
+### TTRatio
+Contains:
+ - My script, which contains my solution to the Rosalind problem.
+ - Two example test sets (FASTA format).
