@@ -34,3 +34,10 @@ Contains:
 Contains:
  - My script, which contains my solution to the Rosalind problem.
  - Two example test sets (FASTA format).
+
+## Find all of the Open Reading Frames of a DNA sequence
+### OpenReadingFrames
+Contains:
+ - ORFrames.py, a script containg my solution to the Rosoalind challenge.
+ - genetic_code.tsv, a tab-delimited file contains the genetic code data.
+ - Two example data sets.
