@@ -34,40 +34,42 @@ def Dictmaker(filename):
 #### Step 2 - Calculate the TT Ratio
 A function that loops through both sequences in the dictionary and tests whether each base is the same. If they are not it then checks if the different bases are of a different type (i.e. Purine vs Pyrimidine). This is done by referencing a dictionary initiated at the start of the function. The number of each are recorded and the ratio is calculated.
 ```python
-# Creates a dictionary of base types
-  Bases = {'C':'pyrimidine',
-           'T':'pyrimidine',
-           'A':'purine',
-           'G':'purine'}
+def TTRatio(Dict):
 
-  # initialises necessary variables
-  keys = list(Dict.keys())
-  transitions = 0
-  transversions = 0
+    # Creates a dictionary of base types
+    Bases = {'C':'pyrimidine',
+             'T':'pyrimidine',
+             'A':'purine',
+             'G':'purine'}
 
-  # Loop through the length of the sequences
-  for b in range(len(str(Dict[keys[0]]))):
+    # initialises necessary variables
+    keys = list(Dict.keys())
+    transitions = 0
+    transversions = 0
 
-      seqA = str(Dict[keys[0]])
-      seqB = str(Dict[keys[1]])
+    # Loop through the length of the sequences
+    for b in range(len(str(Dict[keys[0]]))):
 
-      # Checks if the bases are the same
-      if seqA[b] == seqB[b]:
-          continue
-      elif seqA[b] != seqB[b]:
+        seqA = str(Dict[keys[0]])
+        seqB = str(Dict[keys[1]])
 
-          # Isolates the type of base
-          base1_type = Bases[seqA[b]]
-          base2_type = Bases[seqB[b]]
+        # Checks if the bases are the same
+        if seqA[b] == seqB[b]:
+            continue
+        elif seqA[b] != seqB[b]:
 
-          # Checks if bases types are the same
-          if base1_type == base2_type:
-              transitions += 1
-          elif base1_type != base2_type:
-              transversions += 1
+            # Isolates the type of base
+            base1_type = Bases[seqA[b]]
+            base2_type = Bases[seqB[b]]
 
-  # Calculates the ratio
-  ratio = transitions/transversions
+            # Checks if bases types are the same
+            if base1_type == base2_type:
+                transitions += 1
+            elif base1_type != base2_type:
+                transversions += 1
 
-  print(ratio)
+    # Calculates the ratio
+    ratio = transitions/transversions
+
+    print(ratio)
 ```
