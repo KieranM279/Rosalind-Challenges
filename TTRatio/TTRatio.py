@@ -1,11 +1,11 @@
 
 from Bio import SeqIO
 
-####    Step 1    ####    Parse the FASTA sequences into a dictionary    ####
-def Dictmaker():
+####    Step 1    ####    Import the data    ####
+def Dictmaker(filename):
 
     # Parse the data into environment
-    record = SeqIO.parse('sequences.fasta','fasta')
+    record = SeqIO.parse(filename,'fasta')
     sequences = {}
 
     # Add data to a dictionary
@@ -17,7 +17,7 @@ def Dictmaker():
 
     return(sequences)
 
-sequences = Dictmaker()
+sequences = Dictmaker('sequences.fasta')
 
 ####    Step 2    ####    Calculate the Transition/Transversion ratio    ####
 
@@ -28,8 +28,8 @@ def TTRatio(Dict):
              'T':'pyrimidine',
              'A':'purine',
              'G':'purine'}
-             
-    # intitialises necessary variables
+
+    # initialises necessary variables
     keys = list(Dict.keys())
     transitions = 0
     transversions = 0
