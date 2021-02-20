@@ -1,8 +1,17 @@
+# Translating an mRNA sequence to a protein
 
-RNA = 'AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA'
-
-####    Step 1    ####    Import the data    ####
-
+## Usage
+```python
+# Set a variable as a mRNA sequence in string format
+RNA = "mRNA_string"
+# Import the genetic code data into a usable dictionary
+protein_dict = gcode('genetic_code.tsv')
+# Translate the mRNA into a protein string
+RNA2Prot(RNA)
+```
+## Methods
+#### Step 1 - Import the genetic code into a usable format
+```python
 def gCode(filename):
 
     genetic_code_file = open(str(filename))
@@ -21,11 +30,9 @@ def gCode(filename):
         acids[ln[0]] = codon
 
     return(acids)
-
-protein_dict = gCode('genetic_code.tsv')
-
-####    Step 2 - Translate the mRNA string to the protein string    ####
-
+```
+#### Step 2 - Translate the mRNA sting into a protein
+```python
 def RNA2Prot(mRNA):
 
     protein = ''
@@ -45,5 +52,4 @@ def RNA2Prot(mRNA):
         protein += amino_acid
 
     print(protein)
-
-RNA2Prot(RNA)
+```
